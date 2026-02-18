@@ -13,11 +13,20 @@
 
 <body>
 
+    <!-- ── PROGRESS BAR ────────────────────────────────────── -->
+    <div id="scroll-progress"></div>
+
+    <!-- ── CUSTOM CURSOR ────────────────────────────────────── -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
     <!-- ── VIDEO BACKGROUND ─────────────────────────────────── -->
-    <video id="bg-video" autoplay muted loop playsinline>
-        <source src="blackhole.mp4" type="video/mp4" />
-    </video>
-    <div class="video-overlay"></div>
+    <div id="bg-container">
+        <video id="bg-video" autoplay muted loop playsinline>
+            <source src="blackhole.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay"></div>
+    </div>
 
     <!-- ── PARTICLES ────────────────────────────────────────── -->
     <canvas id="particles-canvas"></canvas>
@@ -45,6 +54,7 @@
     <!-- ── SCRIPTS ───────────────────────────────────────────── -->
     <script src="projects.js"></script>
     <script src="particles.js"></script>
+    <script src="effects.js"></script>
 
 </body>
 
