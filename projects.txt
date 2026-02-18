@@ -1,0 +1,42 @@
+# ============================================================
+# PROJECTS DATA FILE - Sharath Schandra Kolli Portfolio
+# ============================================================
+# HOW TO ADD A NEW PROJECT:
+# 1. Copy a [project] block below
+# 2. Fill in the details
+# 3. Save the file — the website updates automatically!
+#
+# FIELDS:
+#   name        = Project title
+#   tagline     = One-line description shown on the card
+#   details     = Full description (can be multiple sentences)
+#   significance= Why it matters / real-world impact
+#   contribution= What YOU specifically did
+#   tech_stack  = Comma-separated technologies used
+#   image       = Filename of image in portfolio folder (e.g. project1.jpg)
+#                 Leave blank or use "none" if no image
+#   github      = GitHub URL (optional, leave blank if private)
+#   live_url    = Live demo URL (optional)
+# ============================================================
+
+[project]
+name = POTECH — Brain-Computer Interface
+tagline = Bridging the human brain with smart home technology using EEG signals
+details = Developed an EEG-based brain-computer interface using ESP8266 microcontrollers and electrodes for real-time neural signal acquisition and mental health monitoring. The system translates raw brainwave data into actionable commands for home automation.
+significance = Enables hands-free device control for people with physical disabilities. Achieved 85% signal classification accuracy and opens pathways for non-invasive neural interfaces in everyday life.
+contribution = Built the full signal-processing pipeline with embedded C++ for onboard preprocessing. Developed Python + ML algorithms for classifying mental states and mapping them to home automation commands.
+tech_stack = C++, Python, Machine Learning, Signal Processing, ESP8266, Embedded Systems
+image = none
+github = 
+live_url = 
+
+[project]
+name = VULCAN — Self-Driving EV Car
+tagline = University-level autonomous electric vehicle with sensor fusion and computer vision
+details = Leading the technical development of a self-driving electric vehicle at VIT-AP University. The system integrates multiple sensors including LiDAR and Radar with computer vision for real-time road detection and autonomous navigation.
+significance = Received government recognition and secured grants exceeding ₹5 lakhs. Achieved 95% precision in road offset detection at 30 FPS, demonstrating production-grade autonomous driving capability.
+contribution = Designed real-time road offset detection algorithms using computer vision. Led sensor fusion architecture integrating LiDAR, Radar, and camera systems. Oversaw all technical development decisions.
+tech_stack = Computer Vision, Sensor Fusion, LiDAR, Radar, Python, CARLA, OpenCV
+image = none
+github = 
+live_url = 

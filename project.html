@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project — Sharath Schandra Kolli</title>
+    <meta name="description" content="Project details — Sharath Schandra Kolli Portfolio" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+
+    <!-- ── VIDEO BACKGROUND ─────────────────────────────────── -->
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="blackhole.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay"></div>
+
+    <!-- ── PARTICLES ────────────────────────────────────────── -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ── NAVIGATION ───────────────────────────────────────── -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo">SSK</a>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ── PROJECT DETAIL ───────────────────────────────────── -->
+    <div class="detail-page" id="project-detail">
+        <div class="loading">Loading project...</div>
+    </div>
+
+    <!-- ── FOOTER ────────────────────────────────────────────── -->
+    <footer>
+        <p>© 2025 Sharath Schandra Kolli &nbsp;·&nbsp; Built with passion, powered by curiosity</p>
+    </footer>
+
+    <!-- ── SCRIPTS ───────────────────────────────────────────── -->
+    <script src="projects.js"></script>
+    <script src="particles.js"></script>
+
+</body>
+
+</html>
