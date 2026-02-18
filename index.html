@@ -14,6 +14,18 @@
 
 <body>
 
+  <!-- ── PRELOADER ────────────────────────────────────────── -->
+  <div id="preloader">
+    <div class="loader-text">System Initializing Project_Aura...</div>
+    <div class="loader-bar">
+      <div class="loader-progress" id="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- ── CUSTOM CURSOR ────────────────────────────────────── -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
+
   <!-- ── VIDEO BACKGROUND ─────────────────────────────────── -->
   <video id="bg-video" autoplay muted loop playsinline>
     <source src="blackhole.mp4" type="video/mp4" />
@@ -44,7 +56,9 @@
       Schandra Kolli
     </h1>
 
-    <div class="hero-title">Backend Engineer &amp; AI Developer</div>
+    <div class="hero-title">
+      <span class="typewriter" id="typewriter">Backend Engineer</span>
+    </div>
 
     <p class="hero-bio">
       Final year CS student at VIT-AP, building the intersection of intelligent systems and robust backend architecture.
@@ -148,6 +162,7 @@
   <!-- ── SCRIPTS ───────────────────────────────────────────── -->
   <script src="projects.js"></script>
   <script src="particles.js"></script>
+  <script src="effects.js"></script>
 
 
 </body>
