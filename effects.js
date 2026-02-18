@@ -155,7 +155,7 @@
             const video = document.getElementById('bg-video');
             const canvas = document.getElementById('particles-canvas');
 
-            if (video) video.style.transform = `translateY(${scrolled * 0.3}px)`;
+            // Removed video transform to prevent it from moving down
             if (canvas) canvas.style.transform = `translateY(${scrolled * 0.1}px)`;
         });
     }
