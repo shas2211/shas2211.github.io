@@ -15,8 +15,10 @@
 #   tech_stack  = Comma-separated technologies used
 #   image       = Filename of image in portfolio folder (e.g. project1.jpg)
 #                 Leave blank or use "none" if no image
+#   video       = Filename of local video (e.g. demo.mp4) OR YouTube URL
+#                 If provided, video will show instead of the hero image.
 #   github      = GitHub URL (optional, leave blank if private)
-#   live_url    = Live demo URL (optional)
+#   live_url    = Live demo / Project URL (optional)
 # ============================================================
 
 [project]

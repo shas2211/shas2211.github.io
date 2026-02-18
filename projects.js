@@ -207,10 +207,38 @@ async function renderProjectDetail() {
   document.title = `${project.name} — Sharath Schandra Kolli`;
 
   const hasImage = project.image && project.image !== 'none' && project.image !== '';
+  const hasVideo = project.video && project.video !== 'none' && project.video !== '';
 
-  const imageHTML = hasImage
-    ? `<img class="detail-hero-image" src="${project.image}" alt="${project.name}" onerror="this.outerHTML='<div class=\\'detail-hero-placeholder\\'>🚀</div>'">`
-    : `<div class="detail-hero-placeholder">🚀</div>`;
+  let mediaHTML = '';
+
+  if (hasVideo) {
+    if (project.video.includes('youtube.com') || project.video.includes('youtu.be')) {
+      // YouTube Embed
+      let videoId = '';
+      if (project.video.includes('v=')) {
+        videoId = project.video.split('v=')[1].split('&')[0];
+      } else {
+        videoId = project.video.split('/').pop();
+      }
+      mediaHTML = `
+        <div class="detail-hero-video">
+          <iframe width="100%" height="450" src="https://www.youtube.com/embed/${videoId}" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen style="border-radius:20px; border: 1px solid var(--glass-border);"></iframe>
+        </div>`;
+    } else {
+      // Local Video
+      mediaHTML = `
+        <video class="detail-hero-image" controls style="max-height: 500px;">
+          <source src="${project.video}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>`;
+    }
+  } else if (hasImage) {
+    mediaHTML = `<img class="detail-hero-image" src="${project.image}" alt="${project.name}" onerror="this.outerHTML='<div class=\\'detail-hero-placeholder\\'>🚀</div>'">`;
+  } else {
+    mediaHTML = `<div class="detail-hero-placeholder">🚀</div>`;
+  }
 
   const techBadges = project.tech_array.map(t =>
     `<span class="tag" style="font-size:0.85rem;padding:6px 14px">${t}</span>`
@@ -221,15 +249,15 @@ async function renderProjectDetail() {
     : '';
 
   const liveBtn = project.live_url
-    ? `<a href="${project.live_url}" target="_blank" class="btn-secondary">↗ Live Demo</a>`
+    ? `<a href="${project.live_url}" target="_blank" class="btn-secondary">↗ Project Link</a>`
     : '';
 
   container.innerHTML = `
     <a href="index.html#projects" class="back-btn">← Back to Projects</a>
 
-    ${imageHTML}
+    ${mediaHTML}
 
-    <div class="detail-name">${project.name}</div>
+    <div class="detail-name" style="margin-top: 30px;">${project.name}</div>
     <div class="detail-tagline">${project.tagline || ''}</div>
 
     ${project.details ? `
