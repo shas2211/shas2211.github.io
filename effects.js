@@ -148,15 +148,9 @@
         });
     }
 
-    // ─── PARALLAX ────────────────────────────────────────────
+    // ─── PARALLAX (REMOVED) ───────────────────────────────────
     function initParallax() {
-        const canvas = document.getElementById('particles-canvas');
-        if (!canvas) return;
-
-        window.addEventListener('scroll', () => {
-            const scrolled = window.scrollY;
-            canvas.style.transform = `translateY(${scrolled * 0.1}px)`;
-        });
+        // Disabled to keep background pinned
     }
 
     document.addEventListener('DOMContentLoaded', () => {
