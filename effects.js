@@ -148,9 +148,32 @@
         });
     }
 
-    // ─── PARALLAX (REMOVED) ───────────────────────────────────
+    // ─── PARALLAX & PROGRESS ────────────────────────────────
     function initParallax() {
-        // Disabled to keep background pinned
+        const video = document.getElementById('bg-video');
+        const canvas = document.getElementById('particles-canvas');
+        const progressBar = document.getElementById('loader-progress'); // Preloader bar
+        const scrollProgress = document.getElementById('scroll-progress'); // Top page bar
+
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrolled / docHeight) * 100;
+
+            // 1. Update Scroll Bar
+            if (scrollProgress) scrollProgress.style.width = progress + '%';
+
+            // 2. Video Parallax (Significant but safe)
+            if (video) {
+                const yOffset = scrolled * 0.2; // 20% speed
+                video.style.transform = `translate(-50%, calc(-50% + ${yOffset}px)) scale(1.1)`;
+            }
+
+            // 3. Particles Parallax (Subtle)
+            if (canvas) {
+                canvas.style.transform = `translateY(${scrolled * 0.1}px)`;
+            }
+        });
     }
 
     document.addEventListener('DOMContentLoaded', () => {
