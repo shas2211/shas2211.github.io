@@ -150,13 +150,12 @@
 
     // ─── PARALLAX ────────────────────────────────────────────
     function initParallax() {
+        const canvas = document.getElementById('particles-canvas');
+        if (!canvas) return;
+
         window.addEventListener('scroll', () => {
             const scrolled = window.scrollY;
-            const video = document.getElementById('bg-video');
-            const canvas = document.getElementById('particles-canvas');
-
-            // Removed video transform to prevent it from moving down
-            if (canvas) canvas.style.transform = `translateY(${scrolled * 0.1}px)`;
+            canvas.style.transform = `translateY(${scrolled * 0.1}px)`;
         });
     }
 

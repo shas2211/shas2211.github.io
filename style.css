@@ -132,7 +132,7 @@ body {
 
 /* ─── VIDEO BACKGROUND ─────────────────────────────────────── */
 #bg-video {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
@@ -140,6 +140,8 @@ body {
   object-fit: cover;
   z-index: -2;
   opacity: 0.75;
+  transform: none !important;
+  pointer-events: none;
 }
 
 .video-overlay {
