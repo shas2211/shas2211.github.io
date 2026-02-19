@@ -9,9 +9,7 @@
         "Backend Engineer & AI Developer",
         "Systems Architect",
         "ML Research Enthusiast",
-        "Problem Solver",
-        "Full-Stack Developer",
-        "Cybersecurity Student"
+        "Problem Solver"
     ];
 
     // ─── PRELOADER ───────────────────────────────────────────
