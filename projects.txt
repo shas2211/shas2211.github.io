@@ -30,7 +30,7 @@ contribution = Built the full signal-processing pipeline with embedded C++ for o
 tech_stack = C++, Python, Machine Learning, Signal Processing, ESP8266, Embedded Systems
 image = potech.jpg
 github = 
-live_url = 
+live_url = https://www.linkedin.com/posts/sharath2004_msmehackathon-braincomputerinterface-neurotechnology-activity-7379934947131899904-MCVz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEM26DQBSTlBaU_WzXpwKFb4cWGn-cjg-Lw
 
 [project]
 name = VULCAN — Self-Driving EV Car
