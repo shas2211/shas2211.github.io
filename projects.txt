@@ -39,6 +39,6 @@ details = Leading the technical development of a self-driving electric vehicle a
 significance = Received government recognition and secured grants exceeding ₹5 lakhs. Achieved 95% precision in road offset detection at 30 FPS, demonstrating production-grade autonomous driving capability.
 contribution = Designed real-time road offset detection algorithms using computer vision. Led sensor fusion architecture integrating LiDAR, Radar, and camera systems. Oversaw all technical development decisions.
 tech_stack = Computer Vision, Sensor Fusion, LiDAR, Radar, Python, CARLA, OpenCV
-image = none
+image = vulcan.jpg
 github = 
 live_url = 
