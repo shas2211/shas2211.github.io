@@ -28,7 +28,7 @@ details = Developed an EEG-based brain-computer interface using ESP8266 microcon
 significance = Enables hands-free device control for people with physical disabilities. Achieved 85% signal classification accuracy and opens pathways for non-invasive neural interfaces in everyday life.
 contribution = Built the full signal-processing pipeline with embedded C++ for onboard preprocessing. Developed Python + ML algorithms for classifying mental states and mapping them to home automation commands.
 tech_stack = C++, Python, Machine Learning, Signal Processing, ESP8266, Embedded Systems
-image = none
+image = potech.jpg
 github = 
 live_url = 
 
