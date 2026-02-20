@@ -266,40 +266,31 @@ async function renderProjectDetail() {
         videoId = project.post_url.split('/').pop();
       }
       postEmbedHTML = `
-        <div class="detail-section">
-          <div class="detail-section-label">Video Demo</div>
-          <div class="detail-hero-video" style="margin-top:15px">
-            <iframe width="100%" height="400" src="https://www.youtube.com/embed/${videoId}" 
-              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen style="border-radius:15px; border: 1px solid var(--glass-border);"></iframe>
-          </div>
-        </div>`;
+        <iframe width="100%" height="450" src="https://www.youtube.com/embed/${videoId}" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen style="border: 1px solid var(--glass-border);"></iframe>`;
     } else if (project.post_url.includes('vimeo.com')) {
       const videoId = project.post_url.split('/').pop();
       postEmbedHTML = `
-        <div class="detail-section">
-          <div class="detail-section-label">Video Demo</div>
-          <div class="detail-hero-video" style="margin-top:15px">
-            <iframe src="https://player.vimeo.com/video/${videoId}" width="100%" height="400" 
-              frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-              style="border-radius:15px; border: 1px solid var(--glass-border);"></iframe>
-          </div>
-        </div>`;
+        <iframe src="https://player.vimeo.com/video/${videoId}" width="100%" height="450" 
+          frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+          style="border: 1px solid var(--glass-border);"></iframe>`;
     } else if (project.post_url.includes('linkedin.com')) {
-      // Extract the activity ID from the LinkedIn URL
       let activityId = '';
       const match = project.post_url.match(/activity-([0-9]+)/);
       if (match) {
         activityId = match[1];
         postEmbedHTML = `
-          <div class="detail-section">
-            <div class="detail-section-label">Related Post</div>
-            <div class="detail-hero-video" style="margin-top:15px; background: white; border-radius: 15px; overflow: hidden;">
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:${activityId}" 
-                height="600" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-            </div>
+          <div style="background: white; width: 100%;">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:${activityId}" 
+              height="600" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
           </div>`;
       }
+    } else if (project.post_url.endsWith('.mp4') || project.post_url.endsWith('.webm')) {
+      postEmbedHTML = `
+        <video controls style="width:100%; border-radius:15px; border: 1px solid var(--glass-border);">
+          <source src="${project.post_url}" type="video/mp4">
+        </video>`;
     }
   }
 
@@ -316,8 +307,6 @@ async function renderProjectDetail() {
       <div class="detail-section-label">About the Project</div>
       <div class="detail-section-content">${project.details}</div>
     </div>` : ''}
-
-    ${postEmbedHTML}
 
     ${project.significance ? `
     <div class="detail-section">
@@ -342,6 +331,14 @@ async function renderProjectDetail() {
       ${githubBtn}
       ${liveBtn}
       ${postBtn}
+    </div>` : ''}
+
+    ${postEmbedHTML ? `
+    <div class="detail-section project-post-embed">
+      <div class="detail-section-label">Demo Video / Post</div>
+      <div class="embed-container" style="margin-top:20px; border-radius:15px; overflow:hidden;">
+        ${postEmbedHTML}
+      </div>
     </div>` : ''}
   `;
 }
