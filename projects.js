@@ -252,6 +252,42 @@ async function renderProjectDetail() {
     ? `<a href="${project.live_url}" target="_blank" class="btn-secondary">↗ Project Link</a>`
     : '';
 
+  const postBtn = project.post_url
+    ? `<a href="${project.post_url}" target="_blank" class="btn-secondary">⬡ Video/Post</a>`
+    : '';
+
+  let postEmbedHTML = '';
+  if (project.post_url) {
+    if (project.post_url.includes('youtube.com') || project.post_url.includes('youtu.be')) {
+      let videoId = '';
+      if (project.post_url.includes('v=')) {
+        videoId = project.post_url.split('v=')[1].split('&')[0];
+      } else {
+        videoId = project.post_url.split('/').pop();
+      }
+      postEmbedHTML = `
+        <div class="detail-section">
+          <div class="detail-section-label">Video Demo</div>
+          <div class="detail-hero-video" style="margin-top:15px">
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/${videoId}" 
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen style="border-radius:15px; border: 1px solid var(--glass-border);"></iframe>
+          </div>
+        </div>`;
+    } else if (project.post_url.includes('vimeo.com')) {
+      const videoId = project.post_url.split('/').pop();
+      postEmbedHTML = `
+        <div class="detail-section">
+          <div class="detail-section-label">Video Demo</div>
+          <div class="detail-hero-video" style="margin-top:15px">
+            <iframe src="https://player.vimeo.com/video/${videoId}" width="100%" height="400" 
+              frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+              style="border-radius:15px; border: 1px solid var(--glass-border);"></iframe>
+          </div>
+        </div>`;
+    }
+  }
+
   container.innerHTML = `
     <a href="index.html#projects" class="back-btn">← Back to Projects</a>
 
@@ -265,6 +301,8 @@ async function renderProjectDetail() {
       <div class="detail-section-label">About the Project</div>
       <div class="detail-section-content">${project.details}</div>
     </div>` : ''}
+
+    ${postEmbedHTML}
 
     ${project.significance ? `
     <div class="detail-section">
@@ -284,10 +322,11 @@ async function renderProjectDetail() {
       <div class="detail-tech-grid">${techBadges}</div>
     </div>` : ''}
 
-    ${(githubBtn || liveBtn) ? `
+    ${(githubBtn || liveBtn || postBtn) ? `
     <div class="detail-links">
       ${githubBtn}
       ${liveBtn}
+      ${postBtn}
     </div>` : ''}
   `;
 }

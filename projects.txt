@@ -19,6 +19,7 @@
 #                 If provided, video will show instead of the hero image.
 #   github      = GitHub URL (optional, leave blank if private)
 #   live_url    = Live demo / Project URL (optional)
+#   post_url    = Link to a video/post. YouTube/Vimeo links will be embedded automatically!
 # ============================================================
 
 [project]
@@ -31,6 +32,7 @@ tech_stack = C++, Python, Machine Learning, Signal Processing, ESP8266, Embedded
 image = potech.jpg
 github = 
 live_url = 
+post_url = https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 [project]
 name = VULCAN — Self-Driving EV Car
