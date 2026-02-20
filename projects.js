@@ -285,6 +285,21 @@ async function renderProjectDetail() {
               style="border-radius:15px; border: 1px solid var(--glass-border);"></iframe>
           </div>
         </div>`;
+    } else if (project.post_url.includes('linkedin.com')) {
+      // Extract the activity ID from the LinkedIn URL
+      let activityId = '';
+      const match = project.post_url.match(/activity-([0-9]+)/);
+      if (match) {
+        activityId = match[1];
+        postEmbedHTML = `
+          <div class="detail-section">
+            <div class="detail-section-label">Related Post</div>
+            <div class="detail-hero-video" style="margin-top:15px; background: white; border-radius: 15px; overflow: hidden;">
+              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:${activityId}" 
+                height="600" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+            </div>
+          </div>`;
+      }
     }
   }
 
