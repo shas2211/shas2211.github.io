@@ -218,7 +218,7 @@ async function renderProjectDetail() {
       if (project.video.includes('v=')) {
         videoId = project.video.split('v=')[1].split('&')[0];
       } else {
-        videoId = project.video.split('/').pop();
+        videoId = project.video.split('/').pop().split('?')[0];
       }
       mediaHTML = `
         <div class="detail-hero-video">
@@ -258,38 +258,55 @@ async function renderProjectDetail() {
 
   let postEmbedHTML = '';
   if (project.post_url) {
-    if (project.post_url.includes('youtube.com') || project.post_url.includes('youtu.be')) {
+    const url = project.post_url.trim();
+
+    if (url.includes('youtube.com') || url.includes('youtu.be')) {
       let videoId = '';
-      if (project.post_url.includes('v=')) {
-        videoId = project.post_url.split('v=')[1].split('&')[0];
+      if (url.includes('v=')) {
+        videoId = url.split('v=')[1].split('&')[0];
       } else {
-        videoId = project.post_url.split('/').pop();
+        videoId = url.split('/').pop().split('?')[0];
       }
       postEmbedHTML = `
-        <iframe width="100%" height="450" src="https://www.youtube.com/embed/${videoId}" 
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/${videoId}" 
           frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen style="border: 1px solid var(--glass-border);"></iframe>`;
-    } else if (project.post_url.includes('vimeo.com')) {
-      const videoId = project.post_url.split('/').pop();
+          allowfullscreen style="border-radius:15px; border: 1px solid var(--glass-border);"></iframe>`;
+
+    } else if (url.includes('vimeo.com')) {
+      const videoId = url.split('/').pop().split('?')[0];
       postEmbedHTML = `
-        <iframe src="https://player.vimeo.com/video/${videoId}" width="100%" height="450" 
+        <iframe src="https://player.vimeo.com/video/${videoId}" width="100%" height="500" 
           frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-          style="border: 1px solid var(--glass-border);"></iframe>`;
-    } else if (project.post_url.includes('linkedin.com')) {
+          style="border-radius:15px; border: 1px solid var(--glass-border);"></iframe>`;
+
+    } else if (url.includes('linkedin.com')) {
+      // Robust LinkedIn activity ID extraction
       let activityId = '';
-      const match = project.post_url.match(/activity-([0-9]+)/);
-      if (match) {
-        activityId = match[1];
+      const activityMatch = url.match(/activity-([0-9]+)/);
+      const articleMatch = url.match(/view\/([0-9]+)/);
+      const ugcMatch = url.match(/ugcPost:([0-9]+)/);
+
+      if (activityMatch) activityId = activityMatch[1];
+      else if (articleMatch) activityId = articleMatch[1];
+      else if (ugcMatch) activityId = ugcMatch[1];
+
+      if (activityId) {
         postEmbedHTML = `
-          <div style="background: white; width: 100%;">
+          <div class="linkedin-embed-wrapper" style="background: white; border-radius: 15px; overflow: hidden; height: 600px;">
             <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:${activityId}" 
-              height="600" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              height="100%" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
           </div>`;
       }
-    } else if (project.post_url.endsWith('.mp4') || project.post_url.endsWith('.webm')) {
+    } else if (url.includes('instagram.com/p/') || url.includes('instagram.com/reel/')) {
+      const id = url.split('/p/')[1] ? url.split('/p/')[1].split('/')[0] : url.split('/reel/')[1].split('/')[0];
       postEmbedHTML = `
-        <video controls style="width:100%; border-radius:15px; border: 1px solid var(--glass-border);">
-          <source src="${project.post_url}" type="video/mp4">
+          <iframe src="https://www.instagram.com/p/${id}/embed" width="100%" height="600" 
+            frameborder="0" scrolling="no" allowtransparency="true" style="border-radius:15px; border: 1px solid var(--glass-border);"></iframe>`;
+    } else if (url.endsWith('.mp4') || url.endsWith('.webm') || url.includes('.mp4?') || url.includes('.webm?')) {
+      postEmbedHTML = `
+        <video controls style="width:100%; border-radius:15px; border: 1px solid var(--glass-border); max-height: 600px;">
+          <source src="${url}" type="video/mp4">
+          Your browser does not support the video tag.
         </video>`;
     }
   }
@@ -306,6 +323,14 @@ async function renderProjectDetail() {
     <div class="detail-section">
       <div class="detail-section-label">About the Project</div>
       <div class="detail-section-content">${project.details}</div>
+    </div>` : ''}
+
+    ${postEmbedHTML ? `
+    <div class="detail-section project-post-embed">
+      <div class="detail-section-label">Project Demo / Linked Post</div>
+      <div class="embed-container" style="margin-top:20px; border-radius:15px; overflow:hidden;">
+        ${postEmbedHTML}
+      </div>
     </div>` : ''}
 
     ${project.significance ? `
@@ -331,14 +356,6 @@ async function renderProjectDetail() {
       ${githubBtn}
       ${liveBtn}
       ${postBtn}
-    </div>` : ''}
-
-    ${postEmbedHTML ? `
-    <div class="detail-section project-post-embed">
-      <div class="detail-section-label">Demo Video / Post</div>
-      <div class="embed-container" style="margin-top:20px; border-radius:15px; overflow:hidden;">
-        ${postEmbedHTML}
-      </div>
     </div>` : ''}
   `;
 }
