@@ -388,6 +388,11 @@ async function renderExperience() {
     item.className = 'experience-item reveal';
     item.style.transitionDelay = `${index * 0.1}s`;
 
+    const hasImage = exp.image && exp.image !== 'none';
+    const imageHTML = hasImage
+      ? `<div class="exp-image-container"><img src="${exp.image}" alt="${exp.company}" onerror="this.style.display='none'"></div>`
+      : '';
+
     item.innerHTML = `
       <div class="exp-dot"></div>
       <div class="exp-content">
@@ -396,6 +401,7 @@ async function renderExperience() {
           <div class="exp-duration">${exp.duration}</div>
         </div>
         <div class="exp-company">${exp.company}</div>
+        ${imageHTML}
         <div class="exp-details">${exp.details}</div>
       </div>
     `;
@@ -431,7 +437,13 @@ async function renderHackathons() {
     card.className = 'hackathon-card reveal';
     card.style.transitionDelay = `${index * 0.1}s`;
 
+    const hasImage = h.image && h.image !== 'none';
+    const imageHTML = hasImage
+      ? `<img src="${h.image}" class="hack-image" alt="${h.title}" onerror="this.style.display='none'">`
+      : '';
+
     card.innerHTML = `
+      ${imageHTML}
       <div class="hack-header">
         <div class="hack-title">${h.title}</div>
         <div class="hack-date">${h.date}</div>

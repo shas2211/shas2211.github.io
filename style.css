@@ -804,7 +804,27 @@ footer {
   font-size: 0.95rem;
   color: var(--accent2);
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.exp-image-container {
+  width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--glass-border);
+}
+
+.exp-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.exp-content:hover .exp-image-container img {
+  transform: scale(1.05);
 }
 
 .exp-details {
@@ -830,10 +850,11 @@ footer {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
-  padding: 30px;
+  padding: 0;
   backdrop-filter: blur(16px);
   transition: all 0.3s ease;
   height: 100%;
+  overflow: hidden;
 }
 
 .hackathon-card:hover {
@@ -843,8 +864,15 @@ footer {
   box-shadow: 0 10px 30px var(--accent-glow);
 }
 
+.hack-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--glass-border);
+}
+
 .hack-header {
-  margin-bottom: 20px;
+  padding: 24px 24px 12px;
 }
 
 .hack-title {
@@ -863,6 +891,7 @@ footer {
 }
 
 .hack-details {
+  padding: 0 24px 24px;
   font-size: 0.9rem;
   line-height: 1.6;
   color: var(--white-60);
