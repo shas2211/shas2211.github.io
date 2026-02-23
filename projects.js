@@ -506,12 +506,18 @@ function initNavScroll() {
 }
 
 // ─── INIT ─────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   initNavScroll();
+
+  // Render all dynamic sections first
+  await Promise.all([
+    renderSkills(),
+    renderExperience(),
+    renderProjectCards(),
+    renderHackathons(),
+    renderProjectDetail()
+  ]);
+
+  // Then initialize scroll reveal for everything
   initScrollReveal();
-  renderSkills();
-  renderExperience();
-  renderProjectCards();
-  renderHackathons();
-  renderProjectDetail();
 });
