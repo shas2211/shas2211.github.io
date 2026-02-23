@@ -39,12 +39,12 @@ category = ml
 
 [skill]
 name = NLP
-icon = 
+icon = nlp
 category = ml
 
 [skill]
 name = MediaPipe
-icon = 
+icon = mediapipe
 category = ml
 
 [skill]
@@ -74,15 +74,15 @@ category = cloud
 
 [skill]
 name = Sensor Fusion
-icon = 
+icon = sensorfusion
 category = other
 
 [skill]
 name = CARLA
-icon = 
+icon = carla
 category = other
 
 [skill]
 name = Scrapy
-icon = 
+icon = scrapy
 category = other

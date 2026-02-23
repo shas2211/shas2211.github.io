@@ -87,11 +87,19 @@ function parseSkills(text) {
 
 // Devicon icon URL builder
 function deviconUrl(icon) {
-  // Special cases
+  // Special cases & high-quality overrides
   const overrides = {
     flask: { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg', invert: true },
+    openai: { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg', invert: true },
+    mediapipe: { url: 'https://www.gstatic.com/lamda/images/favicon_v2_711e74d.ico', invert: false }, // Placeholder for MediaPipe
+    nlp: { url: 'https://cdn-icons-png.flaticon.com/512/2103/2103633.png', invert: true },
+    sensorfusion: { url: 'https://cdn-icons-png.flaticon.com/512/2540/2540201.png', invert: true },
+    carla: { url: 'https://cdn-icons-png.flaticon.com/512/2555/2555013.png', invert: true },
+    scrapy: { url: 'https://cdn-icons-png.flaticon.com/512/2623/2623779.png', invert: true },
   };
+
   if (overrides[icon]) return overrides[icon];
+
   return {
     url: `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`,
     invert: false
