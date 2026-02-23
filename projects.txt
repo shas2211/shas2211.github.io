@@ -52,7 +52,7 @@ details = A creative computer vision project that uses live webcam feeds to trac
 significance = Demonstrates application of real-time pose estimation for interactive art and social media content creation.
 contribution = Developed the real-time pose tracking system using MediaPipe. Implemented the frame buffering logic for the delayed mirroring effect and designed the overlay interface.
 tech_stack = Python, MediaPipe, OpenCV, Computer Vision
-image = none
+image = goodgoodbye.jpg
 github = https://github.com/shas2211/goodgoodbye
 live_url = 
 post_url = https://www.instagram.com/reel/DTbOHfEk2vU/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==
@@ -64,7 +64,7 @@ details = A Python-based utility that automates the process of transcribing meet
 significance = Saves time for teams by providing instant, searchable records of meetings without manual note-taking.
 contribution = Developed the Python integration for Whisper, implemented the LLM-based summarization logic, and designed a local SQLite storage system for transcripts.
 tech_stack = Python, OpenAI Whisper, LLM, SQLite
-image = none
+image = AI_summmary.jpg
 github = https://github.com/shas2211/Meeting_summarizer
 live_url = 
 
@@ -75,7 +75,7 @@ details = Implemented a DCGAN architecture to generate human-like face images. T
 significance = Demonstrates application of generative AI in synthetic data generation and computer vision.
 contribution = Built the DCGAN model from scratch using TensorFlow and Keras. Handled data preprocessing for the CelebA dataset and optimized hyperparameters for stable training.
 tech_stack = TensorFlow, Keras, Python, GAN, Deep Learning
-image = none
+image = GAN.jpg
 github = https://github.com/shas2211/GAN_image_generator
 live_url = 
 
@@ -86,7 +86,7 @@ details = A contactless attendance system that identifies individuals via camera
 significance = Reduces administrative overhead and eliminates manual tracking errors in educational or corporate environments.
 contribution = Implemented the face recognition pipeline using OpenCV and deep learning models. Integrated the system with a backend database for automated record-keeping.
 tech_stack = Python, OpenCV, Face Recognition, Computer Vision
-image = none
+image = attendance.jpg
 github = https://github.com/shas2211/Camera_based_attendance_system
 live_url = 
 
@@ -97,6 +97,6 @@ details = A security-focused tool designed to identify sensitive information (li
 significance = Essential for organizations handling sensitive data, ensuring compliance with regulations like GDPR.
 contribution = Developed the detection logic using AI/NLP techniques to accurately label and redact PII across various file formats.
 tech_stack = AI, NLP, Python, Security
-image = none
+image = dataprotection.jpg
 github = https://github.com/shas2211/dataprotection
 live_url = 
