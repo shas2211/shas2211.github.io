@@ -44,3 +44,47 @@ tech_stack = Computer Vision, Sensor Fusion, LiDAR, Radar, Python, CARLA, OpenCV
 image = vulcan.jpg
 github = 
 live_url = 
+
+[project]
+name = AI Meeting Summarizer
+tagline = Automated transcription and summarization of meeting audio using Whisper and LLMs
+details = A Python-based utility that automates the process of transcribing meeting recordings. It utilizes OpenAI's Whisper model for high-accuracy speech-to-text and integrates with online LLMs to generate concise summaries, identifying key decisions and action items.
+significance = Saves time for teams by providing instant, searchable records of meetings without manual note-taking.
+contribution = Developed the Python integration for Whisper, implemented the LLM-based summarization logic, and designed a local SQLite storage system for transcripts.
+tech_stack = Python, OpenAI Whisper, LLM, SQLite
+image = none
+github = https://github.com/shas2211/Meeting_summarizer
+live_url = 
+
+[project]
+name = Face Generation with GAN
+tagline = Synthesizing realistic human faces using Deep Convolutional Generative Adversarial Networks
+details = Implemented a DCGAN architecture to generate human-like face images. The project explores the training dynamics between Generator and Discriminator networks to produce high-resolution synthetic imagery.
+significance = Demonstrates application of generative AI in synthetic data generation and computer vision.
+contribution = Built the DCGAN model from scratch using TensorFlow and Keras. Handled data preprocessing for the CelebA dataset and optimized hyperparameters for stable training.
+tech_stack = TensorFlow, Keras, Python, GAN, Deep Learning
+image = none
+github = https://github.com/shas2211/GAN_image_generator
+live_url = 
+
+[project]
+name = Smart Eye — Attendance System
+tagline = Real-time face recognition for automated attendance tracking
+details = A contactless attendance system that identifies individuals via camera feed and logs their presence automatically. It uses computer vision to detect and recognize faces in real-time.
+significance = Reduces administrative overhead and eliminates manual tracking errors in educational or corporate environments.
+contribution = Implemented the face recognition pipeline using OpenCV and deep learning models. Integrated the system with a backend database for automated record-keeping.
+tech_stack = Python, OpenCV, Face Recognition, Computer Vision
+image = none
+github = https://github.com/shas2211/Camera_based_attendance_system
+live_url = 
+
+[project]
+name = DataShield — PII Protection
+tagline = AI-powered detection and redaction of Personally Identifiable Information
+details = A security-focused tool designed to identify sensitive information (like names, emails, and SSNs) in datasets and documents. It uses NLP models to ensure data privacy and compliance.
+significance = Essential for organizations handling sensitive data, ensuring compliance with regulations like GDPR.
+contribution = Developed the detection logic using AI/NLP techniques to accurately label and redact PII across various file formats.
+tech_stack = AI, NLP, Python, Security
+image = none
+github = https://github.com/shas2211/dataprotection
+live_url = 
