@@ -1,19 +1,19 @@
 [hackathon]
-title = AP EAMCET - State Rank 2673
-date = 2022
-details = Secured a top-tier state rank among 200,000+ applicants, placing in the top 1.3%.
+title = Smart India Hackathon 2025 (Hardware Category)
+date = Jan 2025
+details = Shortlisted for the national finals with project "POTECH – Bridging Between Brain and Technology". Developing an affordable and accessible Brain-Computer Interface (BCI) for healthcare and assistive tech. Leading Team Chole Bhature to push the boundaries of neurotechnology.
 
 [hackathon]
-title = UCEED 2022 - AIR 525
-date = 2022
-details = Achieved an All India Rank of 525 in the Undergraduate Common Entrance Examination for Design, a highly competitive exam for IITs.
+title = MSME 5.0 Hackathon 2025 - Winner
+date = Jan 2025
+details = Won an award for innovative idea for "POTECH". Developed a BCI prototype using EEG electrodes and digital signal processing to translate brain waves into tech commands. Focused on making neurotechnology portable and accessible for individuals with disabilities.
 
 [hackathon]
-title = MSME Hackathon Recognition
-date = 2024
-details = Received recognition for the POTECH Brain-Computer Interface project, focusing on neurotechnology for mental health and home automation.
+title = CS Quest - The Ultimate CS Quiz Challenge
+date = Oct 2024
+details = Hosted and organized this major event on the Unstop platform in collaboration with Microsoft Student Chapter. Managed 100+ participants through rounds of DSA, Algorithms, and Core CS concepts.
 
 [hackathon]
-title = Student Director @ Unstop
-date = 2024 - Present
-details = Leading student outreach and community building as a Student Director in the Unstop Campus Ambassador Program.
+title = VIKAS VITAP - VULCAN Showcase
+date = Nov 2024
+details = Presented VULCAN, an autonomous electric vehicle, to visionaries including Lokesh Nara (Minister of IT, AP) and Chandra Pemmasani (Minister of State). Showcased our vision of India's future autonomous roads.

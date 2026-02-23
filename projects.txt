@@ -29,7 +29,7 @@ details = Developed an EEG-based brain-computer interface using ESP8266 microcon
 significance = Enables hands-free device control for people with physical disabilities. Achieved 85% signal classification accuracy and opens pathways for non-invasive neural interfaces in everyday life.
 contribution = Built the full signal-processing pipeline with embedded C++ for onboard preprocessing. Developed Python + ML algorithms for classifying mental states and mapping them to home automation commands.
 tech_stack = C++, Python, Machine Learning, Signal Processing, ESP8266, Embedded Systems
-image = potech.jpg
+image = images/potech.jpg
 github = 
 live_url = 
 post_url = https://www.linkedin.com/posts/sharath2004_msmehackathon-braincomputerinterface-neurotechnology-activity-7379934947131899904-MCVz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEM26DQBSTlBaU_WzXpwKFb4cWGn-cjg-Lw
@@ -41,7 +41,7 @@ details = Leading the technical development of a self-driving electric vehicle a
 significance = Received government recognition and secured grants exceeding ₹5 lakhs. Achieved 95% precision in road offset detection at 30 FPS, demonstrating production-grade autonomous driving capability.
 contribution = Designed real-time road offset detection algorithms using computer vision. Led sensor fusion architecture integrating LiDAR, Radar, and camera systems. Oversaw all technical development decisions.
 tech_stack = Computer Vision, Sensor Fusion, LiDAR, Radar, Python, CARLA, OpenCV
-image = vulcan.jpg
+image = images/vulcan.jpg
 github = 
 live_url = 
 
@@ -52,7 +52,7 @@ details = A creative computer vision project that uses live webcam feeds to trac
 significance = Demonstrates application of real-time pose estimation for interactive art and social media content creation.
 contribution = Developed the real-time pose tracking system using MediaPipe. Implemented the frame buffering logic for the delayed mirroring effect and designed the overlay interface.
 tech_stack = Python, MediaPipe, OpenCV, Computer Vision
-image = goodbye.jpg
+image = images/goodbye.jpg
 github = https://github.com/shas2211/goodgoodbye
 live_url = 
 post_url = https://www.instagram.com/reel/DTbOHfEk2vU/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==
@@ -64,7 +64,7 @@ details = A Python-based utility that automates the process of transcribing meet
 significance = Saves time for teams by providing instant, searchable records of meetings without manual note-taking.
 contribution = Developed the Python integration for Whisper, implemented the LLM-based summarization logic, and designed a local SQLite storage system for transcripts.
 tech_stack = Python, OpenAI Whisper, LLM, SQLite
-image = AI_summary.jpg
+image = images/AI_summary.jpg
 github = https://github.com/shas2211/Meeting_summarizer
 live_url = 
 
@@ -75,7 +75,7 @@ details = Implemented a DCGAN architecture to generate human-like face images. T
 significance = Demonstrates application of generative AI in synthetic data generation and computer vision.
 contribution = Built the DCGAN model from scratch using TensorFlow and Keras. Handled data preprocessing for the CelebA dataset and optimized hyperparameters for stable training.
 tech_stack = TensorFlow, Keras, Python, GAN, Deep Learning
-image = GAN.jpg
+image = images/GAN.jpg
 github = https://github.com/shas2211/GAN_image_generator
 live_url = 
 
@@ -86,7 +86,7 @@ details = A contactless attendance system that identifies individuals via camera
 significance = Reduces administrative overhead and eliminates manual tracking errors in educational or corporate environments.
 contribution = Implemented the face recognition pipeline using OpenCV and deep learning models. Integrated the system with a backend database for automated record-keeping.
 tech_stack = Python, OpenCV, Face Recognition, Computer Vision
-image = attendance.jpg
+image = images/attendance.jpg
 github = https://github.com/shas2211/Camera_based_attendance_system
 live_url = 
 
@@ -97,6 +97,6 @@ details = A security-focused tool designed to identify sensitive information (li
 significance = Essential for organizations handling sensitive data, ensuring compliance with regulations like GDPR.
 contribution = Developed the detection logic using AI/NLP techniques to accurately label and redact PII across various file formats.
 tech_stack = AI, NLP, Python, Security
-image = dataprotection.jpg
+image = images/dataprotection.jpg
 github = https://github.com/shas2211/dataprotection
 live_url = 
