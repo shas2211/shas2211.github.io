@@ -433,8 +433,14 @@ async function renderHackathons() {
 
   grid.innerHTML = '';
   hackathons.forEach((h, index) => {
-    const card = document.createElement('div');
+    const isLink = h.url && h.url !== 'none';
+    const card = document.createElement(isLink ? 'a' : 'div');
     card.className = 'hackathon-card reveal';
+    if (isLink) {
+      card.href = h.url;
+      card.target = '_blank';
+      card.style.textDecoration = 'none'; // Ensure no underline for link cards
+    }
     card.style.transitionDelay = `${index * 0.1}s`;
 
     const hasImage = h.image && h.image !== 'none';
@@ -449,6 +455,7 @@ async function renderHackathons() {
         <div class="hack-date">${h.date}</div>
       </div>
       <div class="hack-details">${h.details}</div>
+      ${isLink ? '<div style="padding: 0 24px 24px; font-size: 0.75rem; color: var(--accent); font-weight: 600;">View Post ↗</div>' : ''}
     `;
     grid.appendChild(card);
   });
