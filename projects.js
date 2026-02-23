@@ -421,7 +421,7 @@ async function renderHackathons() {
 
   const hackathons = await loadHackathons();
   if (!hackathons.length) {
-    grid.innerHTML = '<div class="loading">Achievements coming soon!</div>';
+    grid.innerHTML = '<div class="loading">Hackathons coming soon!</div>';
     return;
   }
 
