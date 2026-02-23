@@ -1,15 +1,6 @@
 # ============================================================
 # SKILLS DATA FILE - Sharath Schandra Kolli Portfolio
 # ============================================================
-# HOW TO ADD A NEW SKILL:
-# 1. Add a [skill] block below
-# 2. Set name = display name
-# 3. Set icon = devicon name (find icons at https://devicon.dev)
-#    e.g. for Python the devicon name is "python"
-#    Leave icon blank to show a default ⚡ emoji instead
-# 4. Set category = one of: language, ml, web, data, cloud, other
-# 5. Save the file — the website updates automatically on refresh!
-# ============================================================
 
 [skill]
 name = Python
@@ -22,8 +13,13 @@ icon = java
 category = language
 
 [skill]
-name = C++
-icon = cplusplus
+name = JavaScript
+icon = javascript
+category = language
+
+[skill]
+name = SQL
+icon = mysql
 category = language
 
 [skill]
@@ -42,13 +38,18 @@ icon = opencv
 category = ml
 
 [skill]
-name = NumPy
-icon = numpy
+name = MediaPipe
+icon = 
 category = ml
 
 [skill]
-name = Pandas
-icon = pandas
+name = NLP
+icon = 
+category = ml
+
+[skill]
+name = GANs
+icon = 
 category = ml
 
 [skill]
@@ -57,8 +58,13 @@ icon = flask
 category = web
 
 [skill]
-name = HTML/CSS
+name = HTML5
 icon = html5
+category = web
+
+[skill]
+name = CSS3
+icon = css3
 category = web
 
 [skill]
@@ -80,3 +86,18 @@ category = other
 name = Azure AI
 icon = azure
 category = cloud
+
+[skill]
+name = Sensor Fusion
+icon = 
+category = other
+
+[skill]
+name = CARLA
+icon = 
+category = other
+
+[skill]
+name = Scrapy
+icon = 
+category = other
