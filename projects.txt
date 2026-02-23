@@ -46,6 +46,18 @@ github =
 live_url = 
 
 [project]
+name = GoodGoodbye — Virtual Dance Partner
+tagline = Real-time body tracking and delayed mirroring to create a virtual dance shadow
+details = A creative computer vision project that uses live webcam feeds to track human poses and display a delayed, mirrored version of the user on the screen. It creates a "virtual partner" effect where a digital shadow dances alongside the user with a specific temporal offset.
+significance = Demonstrates application of real-time pose estimation for interactive art and social media content creation.
+contribution = Developed the real-time pose tracking system using MediaPipe. Implemented the frame buffering logic for the delayed mirroring effect and designed the overlay interface.
+tech_stack = Python, MediaPipe, OpenCV, Computer Vision
+image = none
+github = https://github.com/shas2211/goodgoodbye
+live_url = 
+post_url = https://www.instagram.com/reel/DTbOHfEk2vU/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==
+
+[project]
 name = AI Meeting Summarizer
 tagline = Automated transcription and summarization of meeting audio using Whisper and LLMs
 details = A Python-based utility that automates the process of transcribing meeting recordings. It utilizes OpenAI's Whisper model for high-accuracy speech-to-text and integrates with online LLMs to generate concise summaries, identifying key decisions and action items.
