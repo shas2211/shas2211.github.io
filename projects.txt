@@ -52,7 +52,7 @@ details = A creative computer vision project that uses live webcam feeds to trac
 significance = Demonstrates application of real-time pose estimation for interactive art and social media content creation.
 contribution = Developed the real-time pose tracking system using MediaPipe. Implemented the frame buffering logic for the delayed mirroring effect and designed the overlay interface.
 tech_stack = Python, MediaPipe, OpenCV, Computer Vision
-image = goodgoodbye.jpg
+image = goodbye.jpg
 github = https://github.com/shas2211/goodgoodbye
 live_url = 
 post_url = https://www.instagram.com/reel/DTbOHfEk2vU/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==
@@ -64,7 +64,7 @@ details = A Python-based utility that automates the process of transcribing meet
 significance = Saves time for teams by providing instant, searchable records of meetings without manual note-taking.
 contribution = Developed the Python integration for Whisper, implemented the LLM-based summarization logic, and designed a local SQLite storage system for transcripts.
 tech_stack = Python, OpenAI Whisper, LLM, SQLite
-image = AI_summmary.jpg
+image = AI_summary.jpg
 github = https://github.com/shas2211/Meeting_summarizer
 live_url = 
 
