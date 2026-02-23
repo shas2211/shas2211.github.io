@@ -1,13 +1,13 @@
 [experience]
 role = Technical Lead Intern (VULCAN Autonomous EV)
 company = VIT-AP University
-duration = Sept 2024 – Present
+duration = Sept 2024 – Aug 2025
 details = Leading the technical development of a university-level autonomous electric vehicle. Architecting sensor fusion systems (LiDAR, Radar, Cameras) and real-time control algorithms. Engineered road-offset detection using Computer Vision, achieving 95% precision at 30 FPS. Secured ₹5 Lakhs+ in government grants and official recognition for technical innovation.
 
 [experience]
 role = Unstop Student Director (Campus Ambassador Manager)
 company = Unstop (formerly Dare2Compete)
-duration = Oct 2024 – Present
+duration = Nov 2024 – May 2025
 details = Managed university-wide outreach for the Unstop Campus Ambassador Program. Spearheaded the V-Launchpad 2025 campaign, generating 500+ registrations and 4L+ impressions. Bridged connections between startups and global partners. Organized and hosted major events like CS Quest in collaboration with Microsoft Student Chapter.
 
 [experience]
