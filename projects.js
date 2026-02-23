@@ -360,6 +360,110 @@ async function renderProjectDetail() {
   `;
 }
 
+// ─── EXPERIENCE LOADER ───────────────────────────────────────
+async function loadExperience() {
+  try {
+    const res = await fetch('experience.txt?t=' + Date.now());
+    const text = await res.text();
+    return parseBlocks(text, 'experience');
+  } catch (e) {
+    console.error('Could not load experience.txt:', e);
+    return [];
+  }
+}
+
+async function renderExperience() {
+  const container = document.getElementById('experience-timeline');
+  if (!container) return;
+
+  const experiences = await loadExperience();
+  if (!experiences.length) {
+    container.innerHTML = '<div class="loading">Experience coming soon!</div>';
+    return;
+  }
+
+  container.innerHTML = '';
+  experiences.forEach((exp, index) => {
+    const item = document.createElement('div');
+    item.className = 'experience-item reveal';
+    item.style.transitionDelay = `${index * 0.1}s`;
+
+    item.innerHTML = `
+      <div class="exp-dot"></div>
+      <div class="exp-content">
+        <div class="exp-header">
+          <div class="exp-role">${exp.role}</div>
+          <div class="exp-duration">${exp.duration}</div>
+        </div>
+        <div class="exp-company">${exp.company}</div>
+        <div class="exp-details">${exp.details}</div>
+      </div>
+    `;
+    container.appendChild(item);
+  });
+}
+
+// ─── HACKATHONS LOADER ───────────────────────────────────────
+async function loadHackathons() {
+  try {
+    const res = await fetch('hackathons.txt?t=' + Date.now());
+    const text = await res.text();
+    return parseBlocks(text, 'hackathon');
+  } catch (e) {
+    console.error('Could not load hackathons.txt:', e);
+    return [];
+  }
+}
+
+async function renderHackathons() {
+  const grid = document.getElementById('hackathons-grid');
+  if (!grid) return;
+
+  const hackathons = await loadHackathons();
+  if (!hackathons.length) {
+    grid.innerHTML = '<div class="loading">Achievements coming soon!</div>';
+    return;
+  }
+
+  grid.innerHTML = '';
+  hackathons.forEach((h, index) => {
+    const card = document.createElement('div');
+    card.className = 'hackathon-card reveal';
+    card.style.transitionDelay = `${index * 0.1}s`;
+
+    card.innerHTML = `
+      <div class="hack-header">
+        <div class="hack-title">${h.title}</div>
+        <div class="hack-date">${h.date}</div>
+      </div>
+      <div class="hack-details">${h.details}</div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// ─── GENERAL BLOCK PARSER ─────────────────────────────────────
+function parseBlocks(text, tagName) {
+  const items = [];
+  const regex = new RegExp(`^\\[${tagName}\\]`, 'm');
+  const blocks = text.split(regex).filter(b => b.trim());
+
+  for (const block of blocks) {
+    const item = {};
+    const lines = block.split('\n');
+    for (const line of lines) {
+      if (line.trim().startsWith('#') || !line.trim()) continue;
+      const eqIdx = line.indexOf('=');
+      if (eqIdx === -1) continue;
+      const key = line.substring(0, eqIdx).trim();
+      const value = line.substring(eqIdx + 1).trim();
+      if (key && value) item[key] = value;
+    }
+    if (Object.keys(item).length > 0) items.push(item);
+  }
+  return items;
+}
+
 // ─── SCROLL REVEAL ────────────────────────────────────────────
 function initScrollReveal() {
   const observer = new IntersectionObserver((entries) => {
@@ -387,6 +491,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavScroll();
   initScrollReveal();
   renderSkills();
+  renderExperience();
   renderProjectCards();
+  renderHackathons();
   renderProjectDetail();
 });

@@ -1,0 +1,11 @@
+[experience]
+role = Technical Lead Intern (VULCAN Autonomous EV)
+company = VIT-AP University
+duration = Sept 2024 – Present
+details = Leading the technical development of a university-level autonomous electric vehicle. Architecting sensor fusion systems (LiDAR, Radar, Cameras) and real-time control algorithms. Secured ₹5 Lakhs+ in government grants for project innovation.
+
+[experience]
+role = Software Development Engineer (SDE) Intern
+company = Prayana (EV-Bike Rental Platform)
+duration = Jan 2024 – Aug 2025
+details = Developed scalable backend microservices using Python and Flask. Implemented a real-time bike tracking system with GPS hardware integration, ensuring <1s latency in location updates. Optimized SQLite databases for high-frequency rental logs.

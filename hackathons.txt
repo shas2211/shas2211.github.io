@@ -1,0 +1,19 @@
+[hackathon]
+title = AP EAMCET - State Rank 2673
+date = 2022
+details = Secured a top-tier state rank among 200,000+ applicants, placing in the top 1.3%.
+
+[hackathon]
+title = UCEED 2022 - AIR 525
+date = 2022
+details = Achieved an All India Rank of 525 in the Undergraduate Common Entrance Examination for Design, a highly competitive exam for IITs.
+
+[hackathon]
+title = MSME Hackathon Recognition
+date = 2024
+details = Received recognition for the POTECH Brain-Computer Interface project, focusing on neurotechnology for mental health and home automation.
+
+[hackathon]
+title = Student Director @ Unstop
+date = 2024 - Present
+details = Leading student outreach and community building as a Student Director in the Unstop Campus Ambassador Program.
