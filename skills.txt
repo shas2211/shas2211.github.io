@@ -63,11 +63,6 @@ icon = html5
 category = web
 
 [skill]
-name = CSS3
-icon = css3
-category = web
-
-[skill]
 name = SQLite
 icon = sqlite
 category = data
