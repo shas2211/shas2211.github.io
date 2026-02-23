@@ -13,11 +13,6 @@ icon = java
 category = language
 
 [skill]
-name = JavaScript
-icon = javascript
-category = language
-
-[skill]
 name = SQL
 icon = mysql
 category = language
@@ -55,11 +50,6 @@ category = ml
 [skill]
 name = Flask
 icon = flask
-category = web
-
-[skill]
-name = HTML5
-icon = html5
 category = web
 
 [skill]
