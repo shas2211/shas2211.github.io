@@ -58,6 +58,18 @@ live_url =
 post_url = https://www.instagram.com/reel/DTbOHfEk2vU/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==
 
 [project]
+name = LOOKUPSHA — AI Research Assistant
+tagline = Intelligent Research. Deep Analysis. Instant Delivery.
+details = A minimalist AI-powered research assistant that performs real-time internet searches and synthesizes information into deep insights. It features a monochrome aesthetic and automatically adjusts depth based on user queries.
+significance = Streamlines complex research tasks by combining multi-source search with AI summarization and professional report generation.
+contribution = Developed the full-stack application using Streamlit. Integrated Tavily AI for search and Groq (Llama 3) for analysis. Built the PDF generation and email delivery systems.
+tech_stack = Python, Streamlit, Groq, Tavily, ReportLab, Resend API
+image = images/LOOKUPSHA.jpg
+github = https://github.com/shas2211/LOOKUPSHA
+live_url = https://lookupsha-jwmdljhmik8wnvge8s8lye.streamlit.app/
+post_url = 
+
+[project]
 name = AI Meeting Summarizer
 tagline = Automated transcription and summarization of meeting audio using Whisper and LLMs
 details = A Python-based utility that automates the process of transcribing meeting recordings. It utilizes OpenAI's Whisper model for high-accuracy speech-to-text and integrates with online LLMs to generate concise summaries, identifying key decisions and action items.
@@ -100,3 +112,4 @@ tech_stack = AI, NLP, Python, Security
 image = images/dataprotection.jpg
 github = https://github.com/shas2211/dataprotection
 live_url = 
+

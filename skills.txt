@@ -2,6 +2,8 @@
 # SKILLS DATA FILE - Sharath Schandra Kolli Portfolio
 # ============================================================
 
+# CATEGORIES: language, ml, devops, database, softskill
+
 [skill]
 name = Python
 icon = python
@@ -18,6 +20,21 @@ icon = mysql
 category = language
 
 [skill]
+name = NumPy
+icon = numpy
+category = ml
+
+[skill]
+name = Pandas
+icon = pandas
+category = ml
+
+[skill]
+name = Scikit-learn
+icon = 
+category = ml
+
+[skill]
 name = TensorFlow
 icon = tensorflow
 category = ml
@@ -28,8 +45,13 @@ icon = pytorch
 category = ml
 
 [skill]
-name = OpenCV
-icon = opencv
+name = Flask
+icon = flask
+category = ml
+
+[skill]
+name = FastAPI
+icon = 
 category = ml
 
 [skill]
@@ -38,51 +60,36 @@ icon = openai
 category = ml
 
 [skill]
-name = NLP
-icon = nlp
-category = ml
-
-[skill]
-name = MediaPipe
-icon = mediapipe
-category = ml
-
-[skill]
-name = Flask
-icon = flask
-category = web
-
-[skill]
 name = SQLite
 icon = sqlite
-category = data
+category = database
 
 [skill]
 name = Git
 icon = git
-category = data
+category = devops
 
 [skill]
-name = Linux
-icon = linux
-category = other
+name = Communication
+icon = 
+category = softskill
 
 [skill]
-name = Azure AI
-icon = azure
-category = cloud
+name = Problem Solver
+icon = 
+category = softskill
 
 [skill]
-name = Sensor Fusion
-icon = sensorfusion
-category = other
+name = Leadership
+icon = 
+category = softskill
 
 [skill]
-name = CARLA
-icon = carla
-category = other
+name = Team Collaboration
+icon = 
+category = softskill
 
 [skill]
-name = Scrapy
-icon = scrapy
-category = other
+name = Analytical Thinking
+icon = 
+category = softskill
