@@ -443,27 +443,28 @@ async function renderHackathons() {
   hackathons.forEach((h, index) => {
     const isLink = h.url && h.url !== 'none';
     const card = document.createElement(isLink ? 'a' : 'div');
-    card.className = 'hackathon-card reveal';
+    card.className = 'project-card reveal'; // Using project-card class for consistency
     if (isLink) {
       card.href = h.url;
       card.target = '_blank';
-      card.style.textDecoration = 'none'; // Ensure no underline for link cards
+      card.style.textDecoration = 'none';
     }
     card.style.transitionDelay = `${index * 0.1}s`;
 
-    const hasImage = h.image && h.image !== 'none';
+    const hasImage = h.image && h.image !== 'none' && h.image !== '';
     const imageHTML = hasImage
-      ? `<img src="${h.image}" class="hack-image" alt="${h.title}" onerror="this.style.display='none'">`
-      : '';
+      ? `<img class="project-card-image" src="${h.image}" alt="${h.title}" onerror="this.parentElement.innerHTML='<div class=\\'project-card-image-placeholder\\'>🏆</div>'">`
+      : `<div class="project-card-image-placeholder">🏆</div>`;
 
     card.innerHTML = `
       ${imageHTML}
-      <div class="hack-header">
-        <div class="hack-title">${h.title}</div>
-        <div class="hack-date">${h.date}</div>
+      <div class="project-card-arrow">↗</div>
+      <div class="project-card-body">
+        <div class="project-card-name">${h.title}</div>
+        <div class="project-card-tagline" style="color:var(--accent); font-family:'Space Mono', monospace; font-size:0.75rem; margin-bottom:12px;">${h.date}</div>
+        <div class="project-card-tagline">${h.details}</div>
+        ${isLink ? '<div style="margin-top:16px; font-size: 0.75rem; color: var(--accent); font-weight: 600;">View Achievement ↗</div>' : ''}
       </div>
-      <div class="hack-details">${h.details}</div>
-      ${isLink ? '<div style="padding: 0 24px 24px; font-size: 0.75rem; color: var(--accent); font-weight: 600;">View Post ↗</div>' : ''}
     `;
     grid.appendChild(card);
   });

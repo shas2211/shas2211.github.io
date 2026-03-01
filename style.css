@@ -456,7 +456,8 @@ section {
   padding: var(--section-pad);
 }
 
-.projects-grid {
+.projects-grid,
+.hackathons-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 28px;
@@ -831,72 +832,6 @@ footer {
   font-size: 0.95rem;
   line-height: 1.7;
   color: var(--white-80);
-}
-
-/* ─── HACKATHONS GRID ───────────────────────────────────────── */
-#hackathons {
-  min-height: auto;
-}
-
-.hackathons-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.hackathon-card {
-  display: block;
-  text-decoration: none;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  padding: 0;
-  backdrop-filter: blur(16px);
-  transition: all 0.3s ease;
-  height: 100%;
-  overflow: hidden;
-}
-
-.hackathon-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent);
-  background: var(--glass-hover);
-  box-shadow: 0 10px 30px var(--accent-glow);
-}
-
-.hack-image {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-bottom: 1px solid var(--glass-border);
-}
-
-.hack-header {
-  padding: 24px 24px 12px;
-}
-
-.hack-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 6px;
-  line-height: 1.3;
-}
-
-.hack-date {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.75rem;
-  color: var(--accent);
-  letter-spacing: 1px;
-}
-
-.hack-details {
-  padding: 0 24px 24px;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--white-60);
 }
 
 /* ─── RESPONSIVE ────────────────────────────────────────────── */

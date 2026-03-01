@@ -3,21 +3,25 @@ title = Smart India Hackathon 2025 (Hardware Category)
 date = Jan 2025
 details = Shortlisted for the national finals with project "POTECH – Bridging Between Brain and Technology". Developing an affordable and accessible Brain-Computer Interface (BCI) for healthcare and assistive tech. Leading Team Chole Bhature to push the boundaries of neurotechnology.
 url = https://www.linkedin.com/posts/sharath2004_sih2025-smartindiahackathon-braincomputerinterface-activity-7379938089844207616-jzWm
+image = images/chole.jpg
 
 [hackathon]
 title = MSME 5.0 Hackathon 2025 - Winner
 date = Jan 2025
 details = Won an award for innovative idea for "POTECH". Developed a BCI prototype using EEG electrodes and digital signal processing to translate brain waves into tech commands. Focused on making neurotechnology portable and accessible for individuals with disabilities.
 url = https://www.linkedin.com/posts/sharath2004_msmehackathon-braincomputerinterface-neurotechnology-activity-7379934947131899904-MCVz
+image = images/potech.jpg
 
 [hackathon]
 title = CS Quest - The Ultimate CS Quiz Challenge
 date = Oct 2024
 details = Hosted and organized this major event on the Unstop platform in collaboration with Microsoft Student Chapter. Managed 100+ participants through rounds of DSA, Algorithms, and Core CS concepts.
 url = https://www.linkedin.com/posts/sharath2004_unstop-microsoft-csquest-activity-7338212645021392896-9vRX
+image = images/CSQUEST.jpeg
 
 [hackathon]
 title = VIKAS VITAP - VULCAN Showcase
 date = Nov 2024
 details = Presented VULCAN, an autonomous electric vehicle, to visionaries including Lokesh Nara (Minister of IT, AP) and Chandra Pemmasani (Minister of State). Showcased our vision of India's future autonomous roads.
 url = https://www.linkedin.com/posts/anandrajam_what-if-the-future-of-driving-wasnt-just-ugcPost-7260921355737419777-yxBT
+image = images/VIKAS.jpg

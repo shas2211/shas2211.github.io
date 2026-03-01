@@ -9,3 +9,9 @@ role = Software Development Engineer (SDE) Intern
 company = Prayana (EV-Bike Rental Platform)
 duration = Jan 2024 – Aug 2025
 details = Developed scalable backend microservices using Python and Flask. Implemented a real-time bike tracking system with GPS hardware integration, ensuring <1s latency in location updates. Optimized SQLite databases for high-frequency rental logs, improving query performance by 30%.
+
+[experience]
+role = Unstop Campus Ambassador
+company = Unstop
+duration = Aug 2024 – Present
+details = Representing Unstop at VIT-AP, organizing events like "CS Quest," and fostering a culture of competitive programming and learning through platform-wide initiatives.
